@@ -13,7 +13,9 @@ Input Options:
 Standard Parameters:
 
 -t      Target (ip or dns name) default: 127.0.0.1
+
 -p      Port (target port) default: 514
+
 -l      Level (1-7, 1=kernel ... 7=debug) default: 5=notice
 
 -f      Facility (local1,local2...) default: local4
@@ -25,27 +27,44 @@ Standard Parameters:
 -prefix default: "NeoLogger: "
 
 Special Parameters:
+
 -r      Filename i.e. "C:\Program Files\Trendmicro\updinfo.ini"
+
 -dir    Directory to observe i.e. "D:\FileShare\"
+
 -et     Read Windows Eventlog i.e. "Application" (Security needs 'elevate ...')
 
 Special Functions:
-  -sub    Include subdirectories
-  -ff     File Filter to apply i.e. "*.log", default: "*.*"
-  -n      Read new entries only - applies to single files and Eventlog as input
-  -tail   Read new entrys only (like tail -f); applies to "-r" and "-et"
-  -watch  Observe file system actions in the given directory
-  -fn     Set the file name as prefix. Often used with "-dir"
+
+-sub    Include subdirectories
+
+-ff     File Filter to apply i.e. "*.log", default: "*.*"
+
+-n      Read new entries only - applies to single files and Eventlog as input
+
+-tail   Read new entrys only (like tail -f); applies to "-r" and "-et"
+
+-watch  Observe file system actions in the given directory
+
+-fn     Set the file name as prefix. Often used with "-dir"
 
 Filter/Replace Features:
-  -g      Regex/String to select lines to be send i.e. "sshd"
-  -gv     Regex/String to filter lines from output i.e. "courier:"
-  -i      Ignore case of string set by -g or -gv
-  -a      Readable ASCII characters only (including space and tab)
-  -e      Dont supress empty lines
-  -sv     Search value i.e. "[\s]+" (multiple spaces)
-  -rv     Replacement value i.e. " " (single space)
-  -max x  DoS control - send a maximum of x messages per run (does not apply to "-tail")
+
+-g      Regex/String to select lines to be send i.e. "sshd"
+
+-gv     Regex/String to filter lines from output i.e. "courier:"
+
+-i      Ignore case of string set by -g or -gv
+
+-a      Readable ASCII characters only (including space and tab)
+
+-e      Dont supress empty lines
+
+-sv     Search value i.e. "[\s]+" (multiple spaces)
+
+-rv     Replacement value i.e. " " (single space)
+
+-max x  DoS control - send a maximum of x messages per run (does not apply to "-tail")
   
 === Special function descriptions
 
