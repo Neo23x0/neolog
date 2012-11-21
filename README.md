@@ -11,18 +11,18 @@ Input Options:
   4.   Windows Eventlog Source using the "-et" parameter
 
 Standard Parameters:
-  -t      Target (ip or dns name) default: 127.0.0.1
-  -p      Port (target port) default: 514
-  -l      Level (1-7, 1=kernel ... 7=debug) default: 5=notice
-  -f      Facility (local1,local2...) default: local4
-  -d      Debug switch
-  -m      Message default: "Follow the white rabbit"
-  -prefix default: "NeoLogger: "
+-t      Target (ip or dns name) default: 127.0.0.1
+-p      Port (target port) default: 514
+-l      Level (1-7, 1=kernel ... 7=debug) default: 5=notice
+-f      Facility (local1,local2...) default: local4
+-d      Debug switch
+-m      Message default: "Follow the white rabbit"
+-prefix default: "NeoLogger: "
 
 Special Parameters:
-  -r      Filename i.e. "C:\Program Files\Trendmicro\updinfo.ini"
-  -dir    Directory to observe i.e. "D:\FileShare\"
-  -et     Read Windows Eventlog i.e. "Application" (Security needs 'elevate ...')
+-r      Filename i.e. "C:\Program Files\Trendmicro\updinfo.ini"
+-dir    Directory to observe i.e. "D:\FileShare\"
+-et     Read Windows Eventlog i.e. "Application" (Security needs 'elevate ...')
 
 Special Functions:
   -sub    Include subdirectories
