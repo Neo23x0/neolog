@@ -55,9 +55,6 @@
     <StartupObject>neolog.MainClass</StartupObject>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="KLog_NET">
-      <HintPath>.\KLog_NET.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Drawing" />
