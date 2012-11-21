@@ -2,16 +2,15 @@
 NeoLogger v0.6.2
 Windows Syslog Command Line Logger
 Florian Roth, 2012
-=====================================================
 
-Input Options:
+### Input Options
   1.   Standard input stream (default if nothing else is defined)
   2.   File input set with the "-r" parameter
   3.   Single line set with the "-m" parameter
   4.   Windows Eventlog Source using the "-et" parameter
 
-Standard Parameters:
-=====================================================
+### Standard Parameters
+
 -t      Target (ip or dns name) default: 127.0.0.1
 
 -p      Port (target port) default: 514
@@ -26,8 +25,7 @@ Standard Parameters:
 
 -prefix default: "NeoLogger: "
 
-Special Parameters:
-=====================================================
+### Special Parameters
 
 -r      Filename i.e. "C:\Program Files\Trendmicro\updinfo.ini"
 
@@ -35,8 +33,7 @@ Special Parameters:
 
 -et     Read Windows Eventlog i.e. "Application" (Security needs 'elevate ...')
 
-Special Functions:
-=====================================================
+### Special Functions
 
 -sub    Include subdirectories
 
@@ -50,8 +47,7 @@ Special Functions:
 
 -fn     Set the file name as prefix. Often used with "-dir"
 
-Filter/Replace Features:
-=====================================================
+### Filter/Replace Features
 
 -g      Regex/String to select lines to be send i.e. "sshd"
 
@@ -69,8 +65,7 @@ Filter/Replace Features:
 
 -max x  DoS control - send a maximum of x messages per run (does not apply to "-tail")
   
-Special function descriptions
-=====================================================
+### Special function descriptions
 
 -n    Read new entries only
 
@@ -93,7 +88,7 @@ Sending to 127.0.0.1 Port 514 : NeoLogger: File C:\logfiles\windows.log - Change
 Sending to 127.0.0.1 Port 514 : NeoLogger: File C:\logfiles\super.log - Deleted
 Sending to 127.0.0.1 Port 514 : NeoLogger: File C:\logfiles\readme.txt C:\logfiles\readme-new.txt - Renamed
 
-=== Known Issues
+### Known Issues
 
 * Security Eventlog
 
@@ -107,7 +102,7 @@ I have not yet catched all conflicting parameter combinations. Please send me th
 
 Neologger is not yet checking if a file is ASCII text so it is your obligation to check the directory content and adapt the filter setting. If you set "-ff '*.log'" and one of these .log-files contains binary content, it is send as it is - causing neologger to fail and perhaps the syslog receiver as well. ;)
 
-=== Support
+### Support
 
 Please tell me if "neologger" did not run in your environment. 
 I tested it on Windows 7 x86 but noticed problems with the .NET 3.5 version on Windows 2008 with .NET 4. I tried to make it usable on both Framework versions but am not sure if it worked. 
@@ -118,15 +113,15 @@ Tested on:
 - Windows 2003 x86 (EN) and .NET 4.0
 - Windows 2008 R2 x64 (EN) and .NET 4.0
   
-=== Requirements
+### Requirements
 
 .NET Framework 3.5 (Client Profile) OR .NET Framework 4.0
 
-=== License
+### License
 
 Apache License V2.0
   
-=== Examples
+### Examples
   
 Transmit TrendMicro Office Server Signature Pattern information 
 neolog.exe -t syslog.intranet.local -r "C:\Programme\TrendMicro\updinfo.ini" -g "pattern"
