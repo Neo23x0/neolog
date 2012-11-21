@@ -124,20 +124,25 @@ Apache License V2.0
 ### Examples
   
 Transmit TrendMicro Office Server Signature Pattern information 
+
 neolog.exe -t syslog.intranet.local -r "C:\Programme\TrendMicro\updinfo.ini" -g "pattern"
 
 Transmit currently logged in users
+
 WMIC COMPUTERSYSTEM get username | neolog.exe -t syslog.intranet.local -gv UserName
 
-Transmit the values from the "Run" key 
+Transmit the values from the "Run" key
+
 REG QUERY "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Run" | neolog.exe -t syslog.intranet.local -gv HKEY -sv "[\s]+" -rv " "
 
 ### New since version 0.3
 
 Transmit all new entries to the Application Eventlog (Note: Windows Vista, 7 and 2008 require elevated rights to access the "Security" Eventlog. Use the tool "elevate" which is packed with NeoLogger)
+
 neolog.exe -t syslog.intranet.local -tail -et "Application"
 
 Transmit all entries of the Windows Firewall Log (Access rights have to be set!)
+
 neolog.exe -t syslog.intranet.local -tail -r C:\Windows\system32\LogFiles\Firewall\pfirewall.log
 
 ### New since version 0.4
@@ -163,7 +168,7 @@ Neolog can observe the file system now. It watches over a directory and sens mes
 
 nelog.exe -d -t 10.0.0.1 -dir "C:\fileshare" -watch
 
-==== History
+### History
 
 0.6.2 - Bugfix Verson: Facility and Level Bugfix, Removed \n at end of line
 
