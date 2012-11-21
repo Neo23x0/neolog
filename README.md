@@ -1,7 +1,7 @@
+NeoLog v0.6.2
 =====================================================
-NeoLogger v0.6.2
-Windows Syslog Command Line Logger
-Florian Roth, 2012
+# Windows Syslog Command Line Logger
+# Florian Roth, 2012
 
 ### Input Options
   1.   Standard input stream (default if nothing else is defined)
