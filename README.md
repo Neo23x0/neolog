@@ -11,7 +11,7 @@ Input Options:
   4.   Windows Eventlog Source using the "-et" parameter
 
 Standard Parameters:
-
+=====================================================
 -t      Target (ip or dns name) default: 127.0.0.1
 
 -p      Port (target port) default: 514
@@ -27,6 +27,7 @@ Standard Parameters:
 -prefix default: "NeoLogger: "
 
 Special Parameters:
+=====================================================
 
 -r      Filename i.e. "C:\Program Files\Trendmicro\updinfo.ini"
 
@@ -35,6 +36,7 @@ Special Parameters:
 -et     Read Windows Eventlog i.e. "Application" (Security needs 'elevate ...')
 
 Special Functions:
+=====================================================
 
 -sub    Include subdirectories
 
@@ -49,6 +51,7 @@ Special Functions:
 -fn     Set the file name as prefix. Often used with "-dir"
 
 Filter/Replace Features:
+=====================================================
 
 -g      Regex/String to select lines to be send i.e. "sshd"
 
@@ -66,7 +69,8 @@ Filter/Replace Features:
 
 -max x  DoS control - send a maximum of x messages per run (does not apply to "-tail")
   
-=== Special function descriptions
+Special function descriptions
+=====================================================
 
 -n    Read new entries only
 
