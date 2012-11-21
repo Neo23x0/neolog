@@ -152,5 +152,4 @@ nelog.exe -d -t 10.0.0.1 -dir "C:\fileshare" -watch
 
 0.4 - "New Lines Only" function also for Eventlog, Max Lines function for unwanted DoS protection
 
-0.3.4 - "Read new Lines only" and "Tail" function with new parameters. 
-
+0.3.4 - "Read new Lines only" and "Tail" function with new parameters.
